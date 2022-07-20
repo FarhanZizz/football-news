@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
+/* common styles */
 :root {
     --main-color: #24424F;
   }
@@ -12,6 +12,7 @@ body{
     display: flex;
     justify-content: center;
 }
+/* Header Section  */
 .header{
     display: flex;
     justify-content: center;
@@ -35,12 +36,16 @@ body{
 .header-text p{
     margin-bottom: 40px;
 }
-.header-text a{
-    text-decoration: none;
-    background-color: var(--main-color);
-    color: white;
-    padding: 10px 30px;
-    font-weight: bold;
+.header-btn{
+        text-decoration: none;
+        color: white;
+        border: 1px solid var(--main-color);
+        padding: 10px;
+        letter-spacing: 2px;
+        transition: all .3s;
+}
+.header-btn:hover{
+    letter-spacing: 10px;
 }
 /* MAIN SECTON  */
 .page-selector{
@@ -121,12 +126,14 @@ footer{
     background-color: black;
 }
 .footer-options{
+    margin-top: 20px;
     display: flex;
     justify-content: space-around;
 }
 .footer-options a{
     text-decoration: none;
     color: white;
+    margin: 10px 0;
 }
 .footer-options a:hover{
     color: var(--main-color);
@@ -233,5 +240,9 @@ footer{
     }
     .hidden-btn{
         display: block;
+    }
+    /* footer  */
+    .footer-options{
+        justify-content: space-around;
     }
 }

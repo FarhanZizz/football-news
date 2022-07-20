@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
+/* common styles */
 :root {
     --main-color: #24424F;
   }
@@ -12,6 +12,7 @@ body{
     display: flex;
     justify-content: center;
 }
+/* header Section  */
 .header{
     display: flex;
     justify-content: center;
@@ -35,14 +36,18 @@ body{
 .header-text p{
     margin-bottom: 40px;
 }
-.header-text a{
+.header-btn{
     text-decoration: none;
-    background-color: var(--main-color);
     color: white;
-    padding: 10px 30px;
-    font-weight: bold;
+    border: 1px solid var(--main-color);
+    padding: 10px;
+    letter-spacing: 2px;
+    transition: all .3s;
 }
-
+.header-btn:hover{
+    letter-spacing: 10px;
+}
+/* main section  */
 .page-selector{
     display: flex;
     flex-direction: column;
@@ -79,7 +84,7 @@ body{
     padding: 40px 10px;
     border: 1px solid rgb(214, 207, 207);
 }
-
+    /* Footer  */
 footer{
     text-align: center;
     padding: 100px;
@@ -87,12 +92,14 @@ footer{
     background-color: black;
 }
 .footer-options{
+    margin-top: 20px;
     display: flex;
     justify-content: space-around;
 }
 .footer-options a{
     text-decoration: none;
     color: white;
+    margin: 10px 0;
 }
 .footer-options a:hover{
     color: var(--main-color);
@@ -109,7 +116,10 @@ footer{
     color: var(--main-color);
 
 }
+/* media queries */
+/* mobile devices */
 @media only screen and (max-width: 688px){
+    /* header */
     .header{
         flex-direction: column;
         align-items: center;
@@ -127,9 +137,7 @@ footer{
         margin-left: 10px;
         width: 100%;
     }
-    .matches{
-        grid-template-columns: repeat(1, 1fr);
-    }
+    /* main section  */
     .container{
         flex-direction: column;
         align-items: center;
@@ -140,6 +148,10 @@ footer{
        display: flex;
        background-color: white;
     }
+    .matches{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    /* footer */
     .footer-options{
         flex-direction: column;
     }
@@ -152,6 +164,7 @@ footer{
 }
 
 @media only screen and (min-width: 689px) and (max-width: 992px){
+    /* header  */
      .header{
         width: 70%;
      }
@@ -170,6 +183,11 @@ footer{
      .header-img img{
         width: 100%;
      }
+     /* main section  */
+     .container{
+         flex-direction: column;
+         align-items: center;
+     }
      .page-selector{
         padding: 0;
         width: 90%;
@@ -186,8 +204,8 @@ footer{
     .matches{
         grid-template-columns: repeat(2, 1fr);
     }
-    .container{
-        flex-direction: column;
-        align-items: center;
+    /* footer  */
+    .footer-options{
+        justify-content: space-around;
     }
 }
